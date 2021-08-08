@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 public class Nord extends Player 
 {
     //Variables

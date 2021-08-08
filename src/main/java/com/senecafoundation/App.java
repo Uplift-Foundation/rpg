@@ -1,6 +1,10 @@
+package com.senecafoundation;
+
 import java.util.ArrayList;
-public class App {
-    public static void main(String[] args) throws Exception 
+
+public class App 
+{
+    public static void main( String[] args )
     {
         //ArrayList to withhold Player Races
         ArrayList<IPlayer> characters = new ArrayList<IPlayer>();
@@ -42,6 +46,5 @@ public class App {
             IPlayer word = characters.get(i);
             System.out.println(word.PlayerDetails());
         }
-        
     }
 }

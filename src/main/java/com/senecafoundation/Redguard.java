@@ -1,3 +1,5 @@
+package com.senecafoundation;
+
 public class Redguard extends Player 
 {
     //Variables

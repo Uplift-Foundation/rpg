@@ -1,4 +1,7 @@
+package com.senecafoundation;
+
 import java.util.*;
+
 public class Skyrim implements ISkyrim
 {
     //Variables
