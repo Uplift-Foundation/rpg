@@ -37,7 +37,7 @@ class Orc extends Player
 
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Heavy Armor: " + heavyArmorBonus + " Smithing: " + smithingBonus);
+        return  (this.getName() + " Heavy Armor: " + heavyArmorBonus + " Smithing: " + smithingBonus);
     }
 }
 
