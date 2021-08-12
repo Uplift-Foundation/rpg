@@ -36,6 +36,6 @@ public class HighElf extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Illusion: " + illusionBonus + " Enchanting: " + enchantingBonus);
+        return  (this.getName() + " Illusion: " + illusionBonus + " Enchanting: " + enchantingBonus);
     }
 }
