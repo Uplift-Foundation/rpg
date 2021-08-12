@@ -31,7 +31,7 @@ public class OrcTest {
     @Test
     void getData() {
         assertEquals(
-            "com.senecafoundation.Orc@79e2c065 Heavy Armor: 25 Smithing: 20",
+            "Warren the Orc Heavy Armor: 25 Smithing: 20",
             systemUnderTest.PlayerDetails()
         );
     }
