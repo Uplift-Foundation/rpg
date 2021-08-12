@@ -38,6 +38,6 @@ public class Imperial extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Restoration: " + restorationBonus + " Block: " + blockBonus);
+        return  (this.getName() + " Restoration: " + restorationBonus + " Block: " + blockBonus);
     }
 }
