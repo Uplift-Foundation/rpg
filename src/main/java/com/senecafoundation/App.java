@@ -7,19 +7,19 @@ public class App
     public static void main( String[] args )
     {
         //ArrayList to withhold Player Races
-        ArrayList<IPlayer> characters = new ArrayList<IPlayer>();
+        ArrayList<ICharacter> characters = new ArrayList<ICharacter>();
 
         //Default Character Races
-        Orc one = new Orc("N/A",0,"N/A",25,20);
-        Nord two = new Nord("N/A", 0, "N/A", 25, 20);
-        Khajit three = new Khajit("N/A", 0, "N/A", 25, 20);
-        HighElf four = new HighElf("N/A",0,"N/A", 25,20);
-        Argonian five = new Argonian("N/A",0,"N/A", 25,20);
-        WoodElf six = new WoodElf("N/A",0,"N/A", 25,20);
-        Breton seven = new Breton("N/A",0,"N/A", 25,20);
-        DarkElf eight = new DarkElf("N/A",0,"N/A", 25,20);
-        Imperial nine = new Imperial("N/A",0,"N/A", 25,20);
-        Redguard ten = new Redguard("N/A",0,"N/A", 25,20);
+        Orc one = new Orc("Orc",0,"N/A",25,20);
+        Viking two = new Viking("Viking", 0, "N/A", 25, 20);
+        DemiHuman three = new DemiHuman("DemiHuman", 0, "N/A", 25, 20);
+        Elf four = new Elf("Elf",0,"N/A", 25,20);
+        Nuet five = new Nuet("Nuet",0,"N/A", 25,20);
+        Halfling six = new Halfling("Halfling",0,"N/A", 25,20);
+        HalfElf seven = new HalfElf("HalfElf",0,"N/A", 25,20);
+        ShadowElf eight = new ShadowElf("ShadowElf",0,"N/A", 25,20);
+        Human nine = new Human("Human",0,"N/A", 25,20);
+        Tiefler ten = new Tiefler("Tiefler",0,"N/A", 25,20);
 
         //Adds to characters list
         characters.add(one);
@@ -34,16 +34,16 @@ public class App
         characters.add(ten);
         
         //Default Place Maker/City
-        Skyrim place = new Skyrim("N/A");
+        Cealasia place = new Cealasia("N/A");
 
 
         //Introduction
-        System.out.println(place.WelcomeScreen("Whiterun"));
+        System.out.println(place.WelcomeScreen("The Fading Terrain"));
         place.Directions();
 
         for(int i = 0; i < characters.size(); i++)
         {
-            IPlayer word = characters.get(i);
+            ICharacter word = characters.get(i);
             System.out.println(word.PlayerDetails());
         }
     }

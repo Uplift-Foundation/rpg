@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class Imperial extends Player 
+public class Human extends Character 
 {
     //Variables
     private int restorationBonus;
@@ -28,7 +28,7 @@ public class Imperial extends Player
     
 
     //Constructor
-    public Imperial(String name, int age, String sex, int restoration, int block)
+    public Human(String name, int age, String sex, int restoration, int block)
     {
         super(name, age, sex);
         this.restorationBonus = restoration;

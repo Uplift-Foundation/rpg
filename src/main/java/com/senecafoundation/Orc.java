@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-class Orc extends Player
+class Orc extends Character
 {
     //Variables
     private int heavyArmorBonus;

@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class Breton extends Player 
+public class HalfElf extends Character 
 {
     //Variables
     private int conjurationBonus;
@@ -26,7 +26,7 @@ public class Breton extends Player
     }
 
     //Constructor
-    public Breton(String name, int age, String sex, int conjuration, int restoration)
+    public HalfElf(String name, int age, String sex, int conjuration, int restoration)
     {
         super(name, age, sex);
         this.conjurationBonus = conjuration;

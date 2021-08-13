@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 
 public class DarkElfTest {
     
-    private DarkElf systemUnderTest;
+    private ShadowElf systemUnderTest;
 
     @BeforeEach
     void assignOrc() {
-        this.systemUnderTest = new DarkElf(
+        this.systemUnderTest = new ShadowElf(
             "DarkElf", 
             33, 
             "Male", 

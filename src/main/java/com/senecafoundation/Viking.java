@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class Nord extends Player 
+public class Viking extends Character 
 {
     //Variables
     private int twoHandedSwordBonus;
@@ -26,7 +26,7 @@ public class Nord extends Player
     }
 
     //Constructor
-    public Nord(String name, int age, String sex, int twoHandedSwordB, int speechB)
+    public Viking(String name, int age, String sex, int twoHandedSwordB, int speechB)
     {
         super(name, age, sex);
         this.twoHandedSwordBonus = twoHandedSwordB;
@@ -36,6 +36,6 @@ public class Nord extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Two-Handed: " + twoHandedSwordBonus + " Speech: " + speechBonus);
+        return  (this.getName() + " Two-Handed: " + twoHandedSwordBonus + " Speech: " + speechBonus);
     }
 }

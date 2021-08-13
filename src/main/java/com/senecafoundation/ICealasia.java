@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public interface ISkyrim 
+public interface ICealasia 
 {
     String WelcomeScreen(String x);
     

@@ -2,11 +2,11 @@ package com.senecafoundation;
 
 import java.util.*;
 
-public class Skyrim implements ISkyrim
+public class Cealasia implements ICealasia
 {
     //Variables
     private String City;
-    private ArrayList<IPlayer> Characters;
+    private ArrayList<ICharacter> Characters;
 
     //Encapsulation
     public String getCity()
@@ -20,12 +20,12 @@ public class Skyrim implements ISkyrim
 
     //Constructor
 
-    public Skyrim(ArrayList<IPlayer> characters)
+    public Cealasia(ArrayList<ICharacter> characters)
     {
-        Characters = new ArrayList<IPlayer>(); 
+        Characters = new ArrayList<ICharacter>(); 
     }
     
-    public Skyrim(String city) 
+    public Cealasia(String city) 
     {
         this.City = city;
     }
@@ -45,12 +45,12 @@ public class Skyrim implements ISkyrim
     
     public String WelcomeScreen(String x)
     {
-        return " \n Welcome to the World of Skyrim.\n For now, you are situated in " + x + ".\n";
+        return " \n Welcome to the World of Cealasia.\n For now, you are situated in " + x + ".\n";
     }
 
     public void Directions()
     {
-        System.out.println(" \n Ten different races live within the world of Skyrim.\n Each possessing a different set of starting skills stronger than others. \n Who would you choose? \n");
+        System.out.println(" \n Ten different races live within the world of Cealasia.\n Each possessing a different set of starting skills stronger than others. \n Who would you choose? \n");
     }
 
 }
