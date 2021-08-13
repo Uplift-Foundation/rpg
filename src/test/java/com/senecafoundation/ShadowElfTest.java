@@ -4,15 +4,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ArgonianTest {
+public class ShadowElfTest {
     
-    private Nuet systemUnderTest;
+    private ShadowElf systemUnderTest;
 
     @BeforeEach
     void assignOrc() {
-        this.systemUnderTest = new Nuet(
-            "Argonian", 
-            60, 
+        this.systemUnderTest = new ShadowElf(
+            "ShadowElf", 
+            33, 
             "Male", 
             25, 
             20
@@ -21,17 +21,17 @@ public class ArgonianTest {
 
     @Test 
     void testBookCreate() {
-        assertEquals("Argonian", this.systemUnderTest.getName());
-        assertEquals(60, this.systemUnderTest.getAge());
+        assertEquals("ShadowElf", this.systemUnderTest.getName());
+        assertEquals(33, this.systemUnderTest.getAge());
         assertEquals("Male", this.systemUnderTest.getSex());
-        assertEquals(25, this.systemUnderTest.getLockPickingBonus());
-        assertEquals(20, this.systemUnderTest.getLightArmorBonus());
+        assertEquals(25, this.systemUnderTest.getDestructionBonus());
+        assertEquals(20, this.systemUnderTest.getAlterationBonus());
     }
 
     @Test
     void getData() {
         assertEquals(
-            "Argonian Lockpicking: 25 Light Armor: 20",
+            "ShadowElf Destruction: 25 Alteration: 20",
             systemUnderTest.PlayerDetails()
         );
     }

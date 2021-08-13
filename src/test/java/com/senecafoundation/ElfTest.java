@@ -4,15 +4,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ImperialTest {
+public class ElfTest {
     
-    private Human systemUnderTest;
+    private Elf systemUnderTest;
 
     @BeforeEach
-    void assignOrc() {
-        this.systemUnderTest = new Human(
-            "Imperial", 
-            27, 
+    void assignElf() {
+        this.systemUnderTest = new Elf(
+            "Elf", 
+            23, 
             "Female", 
             25, 
             20
@@ -21,17 +21,17 @@ public class ImperialTest {
 
     @Test 
     void testBookCreate() {
-        assertEquals("Imperial", this.systemUnderTest.getName());
-        assertEquals(27, this.systemUnderTest.getAge());
+        assertEquals("Elf", this.systemUnderTest.getName());
+        assertEquals(23, this.systemUnderTest.getAge());
         assertEquals("Female", this.systemUnderTest.getSex());
-        assertEquals(25, this.systemUnderTest.getRestorationBonus());
-        assertEquals(20, this.systemUnderTest.getBlockBonus());
+        assertEquals(25, this.systemUnderTest.getIllusionBonus());
+        assertEquals(20, this.systemUnderTest.getEnchantingBonus());
     }
 
     @Test
     void getData() {
         assertEquals(
-            "Imperial Restoration: 25 Block: 20",
+            "Elf Illusion: 25 Enchanting: 20",
             systemUnderTest.PlayerDetails()
         );
     }
