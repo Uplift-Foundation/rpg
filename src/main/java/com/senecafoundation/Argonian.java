@@ -36,7 +36,7 @@ public class Argonian extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Lockpicking: " + lockPickingBonus + " Light Armor: " + lightArmorBonus);
+        return  (this.getName() +  " Lockpicking: " + lockPickingBonus + " Light Armor: " + lightArmorBonus);
     }
 }
 
