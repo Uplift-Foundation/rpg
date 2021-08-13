@@ -36,6 +36,6 @@ public class Breton extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Conjuration: " + conjurationBonus + " Restoration: " + restorationBonus);
+        return  (this.getName() + " Conjuration: " + conjurationBonus + " Restoration: " + restorationBonus);
     }
 }
