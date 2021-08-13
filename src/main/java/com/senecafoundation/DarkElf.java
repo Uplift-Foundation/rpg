@@ -36,6 +36,6 @@ public class DarkElf extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Destruction: " + destructionBonus + " Alteration: " + alterationBonus);
+        return  (this.getName() + " Destruction: " + destructionBonus + " Alteration: " + alterationBonus);
     }
 }
