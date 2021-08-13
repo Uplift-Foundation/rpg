@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class WoodElf extends Player 
+public class Halfling extends Character 
 {
     //Variables
     private int archeryBonus;
@@ -26,7 +26,7 @@ public class WoodElf extends Player
     }
 
     //Constructor
-    public WoodElf(String name, int age, String sex, int archery, int pickpocket)
+    public Halfling(String name, int age, String sex, int archery, int pickpocket)
     {
         super(name, age, sex);
         this.archeryBonus = archery;
@@ -36,6 +36,6 @@ public class WoodElf extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Archery: " + archeryBonus + " Pickpocket: " + pickPocketBonus);
+        return  (this.getName() + " Archery: " + archeryBonus + " Pickpocket: " + pickPocketBonus);
     }
 }

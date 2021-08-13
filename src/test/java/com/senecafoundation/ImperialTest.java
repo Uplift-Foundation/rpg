@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 
 public class ImperialTest {
     
-    private Imperial systemUnderTest;
+    private Human systemUnderTest;
 
     @BeforeEach
     void assignOrc() {
-        this.systemUnderTest = new Imperial(
+        this.systemUnderTest = new Human(
             "Imperial", 
             27, 
             "Female", 

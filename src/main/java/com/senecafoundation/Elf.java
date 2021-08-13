@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class HighElf extends Player 
+public class Elf extends Character 
 {
     //Variables
     private int illusionBonus;
@@ -26,7 +26,7 @@ public class HighElf extends Player
     }
 
     //Constructor
-    public HighElf(String name, int age, String sex, int illusion, int enchanting)
+    public Elf(String name, int age, String sex, int illusion, int enchanting)
     {
         super(name, age, sex);
         this.illusionBonus = illusion;

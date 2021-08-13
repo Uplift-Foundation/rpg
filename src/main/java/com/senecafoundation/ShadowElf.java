@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class DarkElf extends Player 
+public class ShadowElf extends Character 
 {
     //Variables
     private int destructionBonus;
@@ -26,7 +26,7 @@ public class DarkElf extends Player
     }
 
     //Constructor
-    public DarkElf(String name, int age, String sex, int destruction, int alteration)
+    public ShadowElf(String name, int age, String sex, int destruction, int alteration)
     {
         super(name, age, sex);
         this.destructionBonus = destruction;

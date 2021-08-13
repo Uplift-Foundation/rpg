@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class Khajit extends Player 
+public class DemiHuman extends Character 
 {
     //Variables
     private int sneakBonus;
@@ -26,7 +26,7 @@ public class Khajit extends Player
     }
 
     //Constructor
-    public Khajit(String name, int age, String sex, int sneak, int alchemy)
+    public DemiHuman(String name, int age, String sex, int sneak, int alchemy)
     {
         super(name, age, sex);
         this.sneakBonus = sneak;
@@ -36,6 +36,6 @@ public class Khajit extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " Sneak: " + sneakBonus + " Alchemy: " + alchemyBonus);
+        return  (this.getName() + " Sneak: " + sneakBonus + " Alchemy: " + alchemyBonus);
     }
 }

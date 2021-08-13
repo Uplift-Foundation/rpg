@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class Redguard extends Player 
+public class Tiefler extends Character 
 {
     //Variables
     private int oneHandedBonus;
@@ -26,7 +26,7 @@ public class Redguard extends Player
     }
 
     //Constructor
-    public Redguard(String name, int age, String sex, int oneHanded, int archery)
+    public Tiefler(String name, int age, String sex, int oneHanded, int archery)
     {
         super(name, age, sex);
         this.oneHandedBonus = oneHanded;
@@ -36,6 +36,6 @@ public class Redguard extends Player
     //Method
     public String PlayerDetails() //override
     {
-        return  (super.toString() + " One Handed: " + oneHandedBonus + " Archery: " + archeryBonus);
+        return  (this.getName() + " One Handed: " + oneHandedBonus + " Archery: " + archeryBonus);
     }
 }

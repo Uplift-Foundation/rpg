@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class Argonian extends Player 
+public class Nuet extends Character 
 {
     //Variables
     private int lockPickingBonus;
@@ -26,7 +26,7 @@ public class Argonian extends Player
     }
 
     //Constructor
-    public Argonian(String name, int age, String sex, int lockPicking, int lightArmor)
+    public Nuet(String name, int age, String sex, int lockPicking, int lightArmor)
     {
         super(name, age, sex);
         this.lockPickingBonus = lockPicking;

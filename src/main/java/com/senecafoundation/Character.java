@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public class Player implements IPlayer
+public class Character implements ICharacter
 {
     //Variables
     private String name;
@@ -41,7 +41,7 @@ public class Player implements IPlayer
         
 
     //Constructor
-    public Player(String n, int a, String s)
+    public Character(String n, int a, String s)
     {
         this.name = n;
         this.age = a;

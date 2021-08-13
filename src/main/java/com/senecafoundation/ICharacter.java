@@ -1,6 +1,6 @@
 package com.senecafoundation;
 
-public interface IPlayer 
+public interface ICharacter 
 {
     String PlayerDetails();
 }
