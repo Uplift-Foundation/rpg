@@ -4,15 +4,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class HighElfTest {
+public class HumanTest {
     
-    private Elf systemUnderTest;
+    private Human systemUnderTest;
 
     @BeforeEach
-    void assignOrc() {
-        this.systemUnderTest = new Elf(
-            "HighElf", 
-            23, 
+    void assignHuman() {
+        this.systemUnderTest = new Human(
+            "Human", 
+            27, 
             "Female", 
             25, 
             20
@@ -21,17 +21,17 @@ public class HighElfTest {
 
     @Test 
     void testBookCreate() {
-        assertEquals("HighElf", this.systemUnderTest.getName());
-        assertEquals(23, this.systemUnderTest.getAge());
+        assertEquals("Human", this.systemUnderTest.getName());
+        assertEquals(27, this.systemUnderTest.getAge());
         assertEquals("Female", this.systemUnderTest.getSex());
-        assertEquals(25, this.systemUnderTest.getIllusionBonus());
-        assertEquals(20, this.systemUnderTest.getEnchantingBonus());
+        assertEquals(25, this.systemUnderTest.getRestorationBonus());
+        assertEquals(20, this.systemUnderTest.getBlockBonus());
     }
 
     @Test
     void getData() {
         assertEquals(
-            "HighElf Illusion: 25 Enchanting: 20",
+            "Human Restoration: 25 Block: 20",
             systemUnderTest.PlayerDetails()
         );
     }
