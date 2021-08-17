@@ -2,10 +2,15 @@ package com.senecafoundation;
 
 import java.util.ArrayList;
 
+import java.util.Scanner;
+
+
 public class App 
 {
     public static void main( String[] args )
     {
+        Scanner sc = new Scanner(System.in);
+
         //ArrayList to withhold Player Races
         ArrayList<ICharacter> characters = new ArrayList<ICharacter>();
 
@@ -46,5 +51,534 @@ public class App
             ICharacter word = characters.get(i);
             System.out.println(word.PlayerDetails());
         }
+            //ends or starts while loop
+            boolean selection = true;
+
+            //Dummy Player Object
+            Character player = new Character("",0,"");
+
+            while(selection)
+            {
+                //Picks Character
+                System.out.println("\nPick A Character: \n Orc, Viking, DemiHuman, Elf, Nuet, Halfling, HalfElf, ShadowElf, Human, Tiefler");
+                String race = sc.nextLine();
+
+                //Condional Statements To Prep Character
+                                //***Orc***\\
+                if((race.equals("Orc")) || (race.equals("orc")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new Orc("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                                //***Viking***\\
+                else if((race.equals("Viking")) || (race.equals("viking")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new Viking("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                                //***DemiHuman***\\
+                else if((race.equals("DemiHuman")) || (race.equals("demihuman")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new DemiHuman("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                                //***Elf***\\
+                else if((race.equals("Elf")) || (race.equals("elf")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new Elf("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                                //***Nuet***\\
+                else if((race.equals("Nuet")) || (race.equals("nuet")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new Nuet("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                            //***Halfling***\\
+                else if((race.equals("Halfling")) || (race.equals("halfling")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new Halfling("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                                //***HalfElf***\\
+                else if((race.equals("HalfElf")) || (race.equals("halfelf")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new HalfElf("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                                //***ShadowElf***\\
+                else if((race.equals("ShadowElf")) || (race.equals("shadowelf")))
+                {
+                    System.out.println("Are you sure of this character?");
+                    String decision = sc.nextLine();
+
+                    if((decision.equals("No")) || (decision.equals("no")))
+                    {
+                        System.out.println("\n . . .");
+                    }
+                    else if((decision.equals("Yes")) || (decision.equals("yes")))
+                    {
+                        //Gives Player's Character Selected
+                        player = new ShadowElf("",0,"",25,20);
+
+                        System.out.println("Character Name: \n");
+                        String characterName = sc.nextLine();
+                        player.setName(characterName);
+
+                        System.out.println("Character Sex: Male/Female \n");
+                        String characterSex = sc.nextLine();
+
+                        if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                        {
+                            player.setSex("Male");
+                        }
+                        else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                        {
+                            player.setSex("Female");
+                        }
+                        else
+                        {
+                            player.setSex("Unknown");
+                        }
+                        while(player.getAge() <= 0 || player.getAge() >= 100)
+                        {
+                            System.out.println("Character Age: \n");
+                            int characterAge = sc.nextInt();
+                            player.setAge(characterAge);
+
+                            if(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Error!"); 
+                            }
+
+                        }
+                        
+                        selection = false;
+                    }
+                    
+                }
+                                //***Human***\\
+                    else if((race.equals("Human")) || (race.equals("human")))
+                    {
+                        System.out.println("Are you sure of this character?");
+                        String decision = sc.nextLine();
+                
+                        if((decision.equals("No")) || (decision.equals("no")))
+                        {
+                            System.out.println("\n . . .");
+                        }
+                        else if((decision.equals("Yes")) || (decision.equals("yes")))
+                        {
+                            //Gives Player's Character Selected
+                            player = new Human("",0,"",25,20);
+                
+                            System.out.println("Character Name: \n");
+                            String characterName = sc.nextLine();
+                            player.setName(characterName);
+                
+                            System.out.println("Character Sex: Male/Female \n");
+                            String characterSex = sc.nextLine();
+                
+                            if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                            {
+                                player.setSex("Male");
+                            }
+                            else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                            {
+                                player.setSex("Female");
+                            }
+                            else
+                            {
+                                player.setSex("Unknown");
+                            }
+                            while(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Character Age: \n");
+                                int characterAge = sc.nextInt();
+                                player.setAge(characterAge);
+                
+                                if(player.getAge() <= 0 || player.getAge() >= 100)
+                                {
+                                    System.out.println("Error!"); 
+                                }
+                
+                            }
+                                        
+                                selection = false;
+                        }
+                                    
+                    }
+                                //***Tiefler***\\
+                    else if((race.equals("Tiefler")) || (race.equals("tiefler")))
+                    {
+                        System.out.println("Are you sure of this character?");
+                        String decision = sc.nextLine();
+                
+                        if((decision.equals("No")) || (decision.equals("no")))
+                        {
+                            System.out.println("\n . . .");
+                        }
+                        else if((decision.equals("Yes")) || (decision.equals("yes")))
+                        {
+                            //Gives Player's Character Selected
+                            player = new Tiefler("",0,"",25,20);
+                
+                            System.out.println("Character Name: \n");
+                            String characterName = sc.nextLine();
+                            player.setName(characterName);
+                
+                            System.out.println("Character Sex: Male/Female \n");
+                            String characterSex = sc.nextLine();
+                
+                            if((characterSex.equals("Male")) || (characterSex.equals("male")))
+                            {
+                                player.setSex("Male");
+                            }
+                            else if((characterSex.equals("Female")) || (characterSex.equals("female")))
+                            {
+                                player.setSex("Female");
+                            }
+                            else
+                            {
+                                player.setSex("Unknown");
+                            }
+                            while(player.getAge() <= 0 || player.getAge() >= 100)
+                            {
+                                System.out.println("Character Age: \n");
+                                int characterAge = sc.nextInt();
+                                player.setAge(characterAge);
+                
+                                if(player.getAge() <= 0 || player.getAge() >= 100)
+                                {
+                                    System.out.println("Error!"); 
+                                }
+                
+                            }
+                                        
+                                selection = false;
+                        }
+                                    
+                    }
+
+            }
+
+            System.out.println("\nWelcome " + player.PlayerDetails());
+        
+
     }
 }
