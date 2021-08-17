@@ -31,17 +31,6 @@ public class Cealasia implements ICealasia
     }
 
     //Methods
-
-    /*
-    public void PrintCharacters() 
-    {
-        foreach(IPlayer people : Characters) 
-        {
-            System.out.println(people.PlayerDetails());
-        }
-    }
-    */
-    
     
     public String WelcomeScreen(String x)
     {
