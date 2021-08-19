@@ -1,11 +1,17 @@
 package com.senecafoundation;
 
+import java.util.UUID;
+
+import com.senecafoundation.DataHandler.IDataHandler;
+
 public class Character implements ICharacter
 {
     //Variables
     private String name;
     private int age;
     private String sex;
+    private String id;
+    private IDataHandler dataHandler;
     
 
     //Encapsulation
@@ -46,6 +52,7 @@ public class Character implements ICharacter
         this.name = n;
         this.age = a;
         this.sex = s;
+        this.id = UUID.randomUUID().toString();
        
     }
 
