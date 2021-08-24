@@ -1,6 +1,6 @@
 package com.senecafoundation;
-
-class Orc extends Character
+import com.senecafoundation.DataHandler.IDataHandler;
+public class Orc extends Character
 {
     //Variables
     private int heavyArmorBonus;
@@ -28,16 +28,20 @@ class Orc extends Character
 
     
     //Constructor
-    public Orc(String name, int age, String sex, int heavyArmor, int smithing)
+    public Orc(String name, int age, String sex, int heavyArmor, int smithing, IDataHandler datahandler)
     {
-        super(name, age, sex);
-         this.heavyArmorBonus = heavyArmor;
-         this.smithingBonus = smithing;
+        super(name, age, sex, datahandler);
+        this.heavyArmorBonus = heavyArmor;
+        this.smithingBonus = smithing;
     }
 
     public String PlayerDetails() //override
     {
         return  (this.getName() + " Heavy Armor: " + heavyArmorBonus + " Smithing: " + smithingBonus);
+    }
+    public String toString() 
+    {
+        return super.toString() + "," + this.getHeavyArmorBonus() + "," + this.getSmithingBonus();
     }
 }
 

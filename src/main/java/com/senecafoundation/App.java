@@ -1,8 +1,9 @@
 package com.senecafoundation;
 
 import java.util.ArrayList;
-
 import java.util.Scanner;
+import com.senecafoundation.DataHandler.FileDataHandler;
+
 
 
 public class App 
@@ -13,18 +14,19 @@ public class App
 
         //ArrayList to withhold Player Races
         ArrayList<ICharacter> characters = new ArrayList<ICharacter>();
+        FileDataHandler dataHandler = new FileDataHandler("./Objects.csv");
 
         //Default Character Races
-        Orc one = new Orc("Orc",0,"N/A",25,20);
-        Viking two = new Viking("Viking", 0, "N/A", 25, 20);
-        DemiHuman three = new DemiHuman("DemiHuman", 0, "N/A", 25, 20);
-        Elf four = new Elf("Elf",0,"N/A", 25,20);
-        Nuet five = new Nuet("Nuet",0,"N/A", 25,20);
-        Halfling six = new Halfling("Halfling",0,"N/A", 25,20);
-        HalfElf seven = new HalfElf("HalfElf",0,"N/A", 25,20);
-        ShadowElf eight = new ShadowElf("ShadowElf",0,"N/A", 25,20);
-        Human nine = new Human("Human",0,"N/A", 25,20);
-        Tiefler ten = new Tiefler("Tiefler",0,"N/A", 25,20);
+        Orc one = new Orc("Orc",0,"N/A",25, 20, dataHandler);
+        Viking two = new Viking("Viking", 0, "N/A", 25, 20, dataHandler);
+        DemiHuman three = new DemiHuman("DemiHuman", 0, "N/A", 25, 20, dataHandler);
+        Elf four = new Elf("Elf",0,"N/A", 25, 20, dataHandler);
+        Nuet five = new Nuet("Nuet",0,"N/A", 25, 20, dataHandler);
+        Halfling six = new Halfling("Halfling",0,"N/A", 25, 20, dataHandler);
+        HalfElf seven = new HalfElf("HalfElf",0,"N/A", 25, 20, dataHandler);
+        ShadowElf eight = new ShadowElf("ShadowElf",0,"N/A", 25, 20, dataHandler);
+        Human nine = new Human("Human",0,"N/A", 25, 20, dataHandler);
+        Tiefler ten = new Tiefler("Tiefler",0,"N/A", 25, 20, dataHandler);
 
         //Adds to characters list
         characters.add(one);
@@ -55,7 +57,7 @@ public class App
             boolean selection = true;
 
             //Dummy Player Object
-            Character player = new Character("",0,"");
+            Character player;
 
             while(selection)
             {
@@ -77,8 +79,8 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new Orc("",0,"",25,20);
-
+                        player = new Orc("", 0,"", 25, 20, dataHandler);
+                        
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
                         player.setName(characterName);
@@ -128,7 +130,7 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new Viking("",0,"",25,20);
+                        player = new Viking("", 0, "", 25, 20, dataHandler);
 
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
@@ -179,7 +181,7 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new DemiHuman("",0,"",25,20);
+                        player = new DemiHuman("", 0, "", 25, 20, dataHandler);
 
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
@@ -230,7 +232,7 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new Elf("",0,"",25,20);
+                        player = new Elf("", 0, "", 25, 20, dataHandler);
 
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
@@ -281,7 +283,7 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new Nuet("",0,"",25,20);
+                        player = new Nuet("",0,"",25,20, dataHandler);
 
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
@@ -332,7 +334,7 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new Halfling("",0,"",25,20);
+                        player = new Halfling("",0,"",25,20, dataHandler);
 
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
@@ -383,7 +385,7 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new HalfElf("",0,"",25,20);
+                        player = new HalfElf("",0,"",25,20, dataHandler);
 
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
@@ -434,7 +436,7 @@ public class App
                     else if((decision.equals("Yes")) || (decision.equals("yes")))
                     {
                         //Gives Player's Character Selected
-                        player = new ShadowElf("",0,"",25,20);
+                        player = new ShadowElf("",0,"",25,20, dataHandler);
 
                         System.out.println("Character Name: \n");
                         String characterName = sc.nextLine();
@@ -485,7 +487,7 @@ public class App
                         else if((decision.equals("Yes")) || (decision.equals("yes")))
                         {
                             //Gives Player's Character Selected
-                            player = new Human("",0,"",25,20);
+                            player = new Human("",0,"",25,20, dataHandler);
                 
                             System.out.println("Character Name: \n");
                             String characterName = sc.nextLine();
@@ -536,7 +538,7 @@ public class App
                         else if((decision.equals("Yes")) || (decision.equals("yes")))
                         {
                             //Gives Player's Character Selected
-                            player = new Tiefler("",0,"",25,20);
+                            player = new Tiefler("",0,"",25,20, dataHandler);
                 
                             System.out.println("Character Name: \n");
                             String characterName = sc.nextLine();
@@ -577,7 +579,8 @@ public class App
 
             }
 
-            System.out.println("\nWelcome " + player.PlayerDetails());
+            
+            
         
 
     }

@@ -1,5 +1,5 @@
 package com.senecafoundation;
-
+import com.senecafoundation.DataHandler.IDataHandler;
 public class HalfElf extends Character 
 {
     //Variables
@@ -26,9 +26,9 @@ public class HalfElf extends Character
     }
 
     //Constructor
-    public HalfElf(String name, int age, String sex, int conjuration, int restoration)
+    public HalfElf(String name, int age, String sex, int conjuration, int restoration, IDataHandler dataHandler)
     {
-        super(name, age, sex);
+        super(name, age, sex, dataHandler);
         this.conjurationBonus = conjuration;
         this.restorationBonus = restoration;
     }
@@ -38,4 +38,10 @@ public class HalfElf extends Character
     {
         return  (this.getName() + " Conjuration: " + conjurationBonus + " Restoration: " + restorationBonus);
     }
+
+    public String toString() 
+    {
+        return super.toString() + "," + this.getConjurationBonus() + "," + this.getRestorationBonus();
+    }
+   
 }

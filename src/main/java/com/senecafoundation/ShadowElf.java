@@ -1,6 +1,9 @@
 package com.senecafoundation;
 
+import com.senecafoundation.DataHandler.IDataHandler;
+
 public class ShadowElf extends Character 
+
 {
     //Variables
     private int destructionBonus;
@@ -26,9 +29,9 @@ public class ShadowElf extends Character
     }
 
     //Constructor
-    public ShadowElf(String name, int age, String sex, int destruction, int alteration)
+    public ShadowElf(String name, int age, String sex, int destruction, int alteration, IDataHandler dataHandler)
     {
-        super(name, age, sex);
+        super(name, age, sex, dataHandler);
         this.destructionBonus = destruction;
         this.alterationBonus = alteration;
     }
@@ -37,5 +40,10 @@ public class ShadowElf extends Character
     public String PlayerDetails() //override
     {
         return  (this.getName() + " Destruction: " + destructionBonus + " Alteration: " + alterationBonus);
+    }
+
+    public String toString() 
+    {
+        return super.toString() + "," + this.getDestructionBonus() + "," + this.getAlterationBonus();
     }
 }

@@ -1,5 +1,5 @@
 package com.senecafoundation;
-
+import com.senecafoundation.DataHandler.IDataHandler;
 public class Halfling extends Character 
 {
     //Variables
@@ -26,9 +26,9 @@ public class Halfling extends Character
     }
 
     //Constructor
-    public Halfling(String name, int age, String sex, int archery, int pickpocket)
+    public Halfling(String name, int age, String sex, int archery, int pickpocket, IDataHandler dataHandler)
     {
-        super(name, age, sex);
+        super(name, age, sex, dataHandler);
         this.archeryBonus = archery;
         this.pickPocketBonus = pickpocket;
     }
@@ -37,5 +37,10 @@ public class Halfling extends Character
     public String PlayerDetails() //override
     {
         return  (this.getName() + " Archery: " + archeryBonus + " Pickpocket: " + pickPocketBonus);
+    }
+
+    public String toString() 
+    {
+        return super.toString() + "," + this.getArcheryBonus() + "," + this.getPickPocketBonus();
     }
 }

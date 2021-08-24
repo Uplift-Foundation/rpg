@@ -4,9 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import org.mockito.Mock;
+import com.senecafoundation.DataHandler.FileDataHandler;
+
 public class ElfTest {
     
     private Elf systemUnderTest;
+    @Mock private transient FileDataHandler fileDataHandler;
 
     @BeforeEach
     void assignElf() {
@@ -15,7 +19,8 @@ public class ElfTest {
             23, 
             "Female", 
             25, 
-            20
+            20,
+            fileDataHandler
         );
     }
 

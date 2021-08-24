@@ -1,30 +1,19 @@
 package com.senecafoundation.DataHandler;
 
-public class DataHandler implements IDataHandler
+import com.senecafoundation.Character;
+
+public abstract class DataHandler implements IDataHandler
 {
 
     @Override
-    public boolean Create(Character character) {
-        // TODO Auto-generated method stub
-        return false;
-    }
+    public abstract boolean Create(Character character);
 
     @Override
-    public Character Read(String id) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public abstract Character Read(String id) throws Exception;
 
     @Override
-    public boolean Update(Character character) {
-        // TODO Auto-generated method stub
-        return false;
-    }
+    public abstract boolean Update(Character character);
 
     @Override
-    public boolean Delete(String id) {
-        // TODO Auto-generated method stub
-        return false;
-    }
-    
+    public abstract boolean Delete(String id);
 }
