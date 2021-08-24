@@ -1,5 +1,7 @@
 package com.senecafoundation;
 
+import com.senecafoundation.DataHandler.IDataHandler;
+
 public class DemiHuman extends Character 
 {
     //Variables
@@ -26,9 +28,9 @@ public class DemiHuman extends Character
     }
 
     //Constructor
-    public DemiHuman(String name, int age, String sex, int sneak, int alchemy)
+    public DemiHuman(String name, int age, String sex, int sneak, int alchemy, IDataHandler dataHandler)
     {
-        super(name, age, sex);
+        super(name, age, sex, dataHandler);
         this.sneakBonus = sneak;
         this.alchemyBonus = alchemy;
     }
@@ -37,5 +39,10 @@ public class DemiHuman extends Character
     public String PlayerDetails() //override
     {
         return  (this.getName() + " Sneak: " + sneakBonus + " Alchemy: " + alchemyBonus);
+    }
+
+    public String toString() 
+    {
+        return super.toString() + "," + this.getSneak() + "," + this.getAlchemyBonus();
     }
 }

@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import com.senecafoundation.DataHandler.IDataHandler;
 
-public class Character implements ICharacter
+public abstract class Character implements ICharacter
 {
     //Variables
     private String name;
@@ -13,11 +13,19 @@ public class Character implements ICharacter
     private String id;
     private IDataHandler dataHandler;
     
-
     //Encapsulation
+    public IDataHandler getDataHandler() {
+        return dataHandler;
+    }
     public String getName()
     {
         return name;
+    }
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
     }
     public void setName(String name)
     {
@@ -41,19 +49,15 @@ public class Character implements ICharacter
     {
         this.sex = sex;
     }
-
   
-    
-        
-
     //Constructor
-    public Character(String n, int a, String s)
+    public Character(String n, int a, String s, IDataHandler dataHandler)
     {
         this.name = n;
         this.age = a;
         this.sex = s;
-        this.id = UUID.randomUUID().toString();
-       
+        this.setId(UUID.randomUUID().toString());
+        this.dataHandler = dataHandler; 
     }
 
     //Methods
@@ -62,4 +66,8 @@ public class Character implements ICharacter
         return "Player Name: " + name +  " Player Age: " + age + " Sex: " + sex;
     }
 
+    public String toString() 
+    {
+        return this.getClass().getSimpleName() + "," + this.getId() + "," + this.getName() + ","  + this.getAge() + "," + this.getSex();
+    }
 }

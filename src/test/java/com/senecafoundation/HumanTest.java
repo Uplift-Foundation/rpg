@@ -4,9 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import org.mockito.Mock;
+import com.senecafoundation.DataHandler.FileDataHandler;
+
 public class HumanTest {
     
     private Human systemUnderTest;
+    @Mock private transient FileDataHandler fileDataHandler;
 
     @BeforeEach
     void assignHuman() {
@@ -15,7 +19,8 @@ public class HumanTest {
             27, 
             "Female", 
             25, 
-            20
+            20,
+            fileDataHandler
         );
     }
 

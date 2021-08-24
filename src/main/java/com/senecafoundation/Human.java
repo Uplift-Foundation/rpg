@@ -1,4 +1,5 @@
 package com.senecafoundation;
+import com.senecafoundation.DataHandler.IDataHandler;
 
 public class Human extends Character 
 {
@@ -28,9 +29,9 @@ public class Human extends Character
     
 
     //Constructor
-    public Human(String name, int age, String sex, int restoration, int block)
+    public Human(String name, int age, String sex, int restoration, int block, IDataHandler dataHandler)
     {
-        super(name, age, sex);
+        super(name, age, sex, dataHandler);
         this.restorationBonus = restoration;
         this.blockBonus = block;
     }
@@ -39,5 +40,10 @@ public class Human extends Character
     public String PlayerDetails() //override
     {
         return  (this.getName() + " Restoration: " + restorationBonus + " Block: " + blockBonus);
+    }
+    public String toString() 
+    {
+        // We just realized we could do it this way...
+        return super.toString() + "," + this.getRestorationBonus() + "," + this.getBlockBonus();
     }
 }

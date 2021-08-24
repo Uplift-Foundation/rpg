@@ -1,5 +1,5 @@
 package com.senecafoundation;
-
+import com.senecafoundation.DataHandler.IDataHandler;
 public class Nuet extends Character 
 {
     //Variables
@@ -26,9 +26,9 @@ public class Nuet extends Character
     }
 
     //Constructor
-    public Nuet(String name, int age, String sex, int lockPicking, int lightArmor)
+    public Nuet(String name, int age, String sex, int lockPicking, int lightArmor, IDataHandler dataHandler)
     {
-        super(name, age, sex);
+        super(name, age, sex, dataHandler);
         this.lockPickingBonus = lockPicking;
         this.lightArmorBonus = lightArmor;
     }
@@ -37,6 +37,11 @@ public class Nuet extends Character
     public String PlayerDetails() //override
     {
         return  (this.getName() +  " Lockpicking: " + lockPickingBonus + " Light Armor: " + lightArmorBonus);
+    }
+
+    public String toString() 
+    {
+        return super.toString() + "," + this.getLockPickingBonus() + "," + this.getLightArmorBonus();
     }
 }
 

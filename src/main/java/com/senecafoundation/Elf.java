@@ -1,5 +1,7 @@
 package com.senecafoundation;
 
+import com.senecafoundation.DataHandler.IDataHandler;
+
 public class Elf extends Character 
 {
     //Variables
@@ -26,9 +28,9 @@ public class Elf extends Character
     }
 
     //Constructor
-    public Elf(String name, int age, String sex, int illusion, int enchanting)
+    public Elf(String name, int age, String sex, int illusion, int enchanting, IDataHandler dataHandler)
     {
-        super(name, age, sex);
+        super(name, age, sex, dataHandler);
         this.illusionBonus = illusion;
         this.enchantingBonus = enchanting;
     }
@@ -37,5 +39,10 @@ public class Elf extends Character
     public String PlayerDetails() //override
     {
         return  (this.getName() + " Illusion: " + illusionBonus + " Enchanting: " + enchantingBonus);
+    }
+
+    public String toString() 
+    {
+        return super.toString() + "," + this.getIllusionBonus() + "," + this.getEnchantingBonus();
     }
 }

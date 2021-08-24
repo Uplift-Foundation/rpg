@@ -4,9 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import org.mockito.Mock;
+import com.senecafoundation.DataHandler.FileDataHandler;
+
 public class NuetTest {
     
     private Nuet systemUnderTest;
+    @Mock private transient FileDataHandler fileDataHandler;
 
     @BeforeEach
     void assignNuet() {
@@ -15,7 +19,9 @@ public class NuetTest {
             60, 
             "Male", 
             25, 
-            20
+            20,
+            fileDataHandler
+
         );
     }
 
