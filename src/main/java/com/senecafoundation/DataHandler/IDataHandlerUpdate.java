@@ -4,5 +4,5 @@ import com.senecafoundation.Character;
 
 public interface IDataHandlerUpdate 
 {
-    public boolean Update(Character character);
+    public Character Update(Character character);
 }

@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
 import java.io.*;
 
 import com.senecafoundation.Character;
@@ -81,14 +82,62 @@ public class FileDataHandler extends DataHandler {
     }
 
     @Override
-    public boolean Update(Character character) {
+    public Character Update(Character characterToUpdate) 
+    {
         // TODO This is code to update to a file
-        return false;
+
+        try {
+            this.Delete(characterToUpdate.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        this.Create(characterToUpdate);
+        return characterToUpdate;
     }
 
     @Override
-    public boolean Delete(String id) {
+    public boolean Delete(String id) throws Exception
+    {
         // This is delete from a file
-        return false;
+        //now read the file line by line...
+        ArrayList<String> lines = new ArrayList<String>();
+        if (this.file != null) 
+        {
+            this.scanner = new Scanner(this.file);
+            while (this.scanner != null && this.scanner.hasNextLine()) 
+            {
+                String line = this.scanner.nextLine();
+                if(!line.contains(id)) 
+                { 
+                    lines.add(line);
+                }
+            }
+        }
+
+        BufferedWriter bw;
+        try 
+        {
+            bw = new BufferedWriter(new FileWriter(this.fileLocation));
+            lines.forEach(lineToWrite ->
+                { 
+                    try 
+                    {
+                        bw.write(lineToWrite);
+                        bw.newLine();
+                    } catch (IOException e) 
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            );
+            bw.flush();
+            bw.close();
+            return true;
+        } catch (IOException e1) 
+        {
+            e1.printStackTrace();
+        }
+        // We throw a custom error here if we can't find anything with that ID
+        throw new Exception("Item not found with that ID");
     }
 }

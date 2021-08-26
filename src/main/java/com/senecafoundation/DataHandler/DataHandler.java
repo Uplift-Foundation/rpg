@@ -12,8 +12,8 @@ public abstract class DataHandler implements IDataHandler
     public abstract Character Read(String id) throws Exception;
 
     @Override
-    public abstract boolean Update(Character character);
+    public abstract Character Update(Character character);
 
     @Override
-    public abstract boolean Delete(String id);
+    public abstract boolean Delete(String id) throws Exception;
 }
