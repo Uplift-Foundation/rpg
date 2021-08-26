@@ -2,7 +2,6 @@ package com.senecafoundation;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.senecafoundation.DataHandler.FileDataHandler;
 
@@ -15,7 +14,7 @@ public class FileDataHandlerTest {
     private Orc testOrc;
 
     @BeforeEach
-    void assignPlant(){
+    void assignObs(){
         this.systemUnderTest = new FileDataHandler("./Objects.csv");
         this.testOrc = new Orc("Chance",18,"Male",1,10, this.systemUnderTest);
     }

@@ -1,15 +1,10 @@
 package com.senecafoundation.DataHandler;
 
-import java.nio.file.Paths;
 import java.util.Scanner;
-import java.nio.file.Files;
-import java.util.Arrays;
-import java.util.List;
 import java.util.ArrayList;
 import java.io.*;
 
 import com.senecafoundation.Character;
-import com.senecafoundation.ICharacter;
 import com.senecafoundation.Orc;
 
 public class FileDataHandler extends DataHandler {
@@ -24,7 +19,6 @@ public class FileDataHandler extends DataHandler {
             this.file = new File(fileLocationFromUser);
             this.scanner = new Scanner(this.file);
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -84,7 +78,6 @@ public class FileDataHandler extends DataHandler {
     @Override
     public Character Update(Character characterToUpdate) 
     {
-        // TODO This is code to update to a file
 
         try {
             this.Delete(characterToUpdate.getId());
