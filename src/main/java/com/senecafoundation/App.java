@@ -2,19 +2,21 @@ package com.senecafoundation;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import com.senecafoundation.DataHandler.FileDataHandler;
 
+import com.senecafoundation.DataHandler.FileDataHandler;
+import com.senecafoundation.Scene.Scenario;
 
 
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
         Scanner sc = new Scanner(System.in);
 
         //ArrayList to withhold Player Races
         ArrayList<ICharacter> characters = new ArrayList<ICharacter>();
-        FileDataHandler dataHandler = new FileDataHandler("./Objects.csv");
+
+        FileDataHandler dataHandler = new FileDataHandler("./characterData.csv");
 
         //Default Character Races
         Orc one = new Orc("Orc",0,"N/A",25, 20, dataHandler);
@@ -59,6 +61,8 @@ public class App
             //Dummy Player Object
             Character player;
 
+            
+            
             while(selection)
             {
                 //Picks Character
@@ -580,7 +584,18 @@ public class App
             }
 
             
+            Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
+            first.setResponseOne("Nothing there!");
+            first.setResponseTwo("Something is there!");
+            first.Scene();
+            first.playThrough();
             
+            
+            /*
+            Scenario first = new Scenario("Nothing there!", "Something is there!", "Left Path", "Right Path", 0, "Meadow Peak" ,"You stumbled upon a path that splits in two.");
+            first.Scene();
+            first.playThrough();
+            */
         
 
     }
