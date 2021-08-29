@@ -2,20 +2,12 @@ package com.senecafoundation.Scene;
 
 public class Choices extends Response
 {
-    private int id;
+    //Variables
     private String choiceOne;
     private String choiceTwo;
     
     
     //Accessors and Mutators
-    public int getId() 
-    {
-        return id;
-    }
-    public void setId(int id) 
-    {
-        this.id = id;
-    }
     public String getChoiceOne() 
     {
         return choiceOne;
@@ -34,10 +26,8 @@ public class Choices extends Response
     }
     
     //Constructor
-    public Choices(String responseOne, String responseTwo, int id, String one, String two)
+    public Choices(String one, String two )
     {
-        super(responseOne, responseTwo);
-        this.id = id;
         this.choiceOne = one;
         this.choiceTwo = two;
     }

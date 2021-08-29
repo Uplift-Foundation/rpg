@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Scenario extends Choices
 {
     //Variables
+
+    private int id;
+
     private String sceneName;
     
     private String sceneText;
@@ -12,6 +15,16 @@ public class Scenario extends Choices
     private Scanner input = new Scanner(System.in);
 
     //Accessor and Mutators
+
+    public int getId() 
+    {
+        return id;
+    }
+    public void setId(int id) 
+    {
+        this.id = id;
+    }
+
     public String getSceneName() 
     {
         return sceneName;
@@ -32,9 +45,10 @@ public class Scenario extends Choices
         this.sceneText = sceneText;
     }
 
-    public Scenario(String responseOne, String responseTwo, int id, String choiceOne, String choiceTwo, String sceneName, String sceneText)
+    public Scenario(String choiceOne, String choiceTwo, int id, String sceneName, String sceneText)
     {
-        super(responseOne, responseTwo, id, choiceOne, choiceTwo);
+        super(choiceOne, choiceTwo);
+        this.id = id;
         this.sceneName = sceneName;
         this.sceneText = sceneText;
     }
@@ -55,11 +69,11 @@ public class Scenario extends Choices
 
             if(choiceX == 1)
             {
-                System.out.println(this.getResponseOne());
+                System.out.println(this.getResponseOne() + "\n");
             }
             else if(choiceX == 2)
             {
-                System.out.println(this.getResponseTwo());
+                System.out.println(this.getResponseTwo() + "\n");
             }
         
     }

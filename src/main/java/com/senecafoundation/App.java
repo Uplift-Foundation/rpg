@@ -6,6 +6,7 @@ import java.util.Scanner;
 import com.senecafoundation.DataHandler.FileDataHandler;
 import com.senecafoundation.Scene.Scenario;
 
+
 public class App 
 {
     public static void main( String[] args ) throws Exception
@@ -583,10 +584,18 @@ public class App
             }
 
             
-
-            Scenario first = new Scenario("Nothing there!","Something is there!",0,"Left Path","Right Path","Meadow Peak","You stumbled upon a path that splits in two.");
+            Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
+            first.setResponseOne("Nothing there!");
+            first.setResponseTwo("Something is there!");
             first.Scene();
             first.playThrough();
+            
+            
+            /*
+            Scenario first = new Scenario("Nothing there!", "Something is there!", "Left Path", "Right Path", 0, "Meadow Peak" ,"You stumbled upon a path that splits in two.");
+            first.Scene();
+            first.playThrough();
+            */
         
 
     }

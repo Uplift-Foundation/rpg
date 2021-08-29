@@ -26,10 +26,10 @@ public class Response
     }
 
     //Constructor
-    public Response(String one, String two)
+    public Response()
     {
-        this.responseOne = one;
-        this.responseTwo = two;
+        
+        
     }
 
     
