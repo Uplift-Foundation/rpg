@@ -72,7 +72,7 @@ public class CharacterSelection
 
 
 
-    public Character picker()
+    public Character picker() throws Exception
     {
         Character character;
         boolean flag = true;
@@ -87,86 +87,96 @@ public class CharacterSelection
             {
                 character = new Orc("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("Viking")) || (race.equals("viking")))
             {
                 character = new Viking("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("DemiHuman")) || (race.equals("demihuman")))
             {
                 character = new DemiHuman("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("Elf")) || (race.equals("elf")))
             {
                 character = new Elf("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("Nuet")) || (race.equals("nuet")))
             {
                 character = new Nuet("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("Halfling")) || (race.equals("halfling")))
             {
                 character = new Halfling("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("HalfElf")) || (race.equals("HalfElf")))
             {
                 character = new HalfElf("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("ShadowElf")) || (race.equals("shadowelf")))
             {
                 character = new ShadowElf("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("Human")) || (race.equals("human")))
             {
                 character = new Human("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
             else if((race.equals("Tiefler")) || (race.equals("tiefler")))
             {
                 character = new Tiefler("",0,"",25,20,dataHandler);
                 character.setName(pickName());
-                character.setAge(pickAge());
                 character.setSex(pickSex());
+                character.setAge(pickAge());
                 flag = false;
+                return character;
             }
 
         }
 
-        return character.toString();
+        throw new Exception("You did not pick a valid exception");
     }
     
 }

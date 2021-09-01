@@ -56,11 +56,10 @@ public class App
             ICharacter word = characters.get(i);
             System.out.println(word.PlayerDetails());
         }
-
-        Character dummy;
             
-        CharacterSelection pick;
-        pick.picker();
+        CharacterSelection pick = new CharacterSelection();
+        Character dummy = pick.picker();
+        System.out.println("\nCharacter Created: " + dummy.toString() + "\n");
             
             
             

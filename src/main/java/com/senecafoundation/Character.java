@@ -1,7 +1,6 @@
 package com.senecafoundation;
 
 import java.util.UUID;
-import java.util.Scanner;
 
 import com.senecafoundation.DataHandler.IDataHandler;
 
@@ -14,7 +13,6 @@ public abstract class Character implements ICharacter
     private String sex;
     private String id;
     private IDataHandler dataHandler;
-    private Scanner input = new Scanner(System.in);
     
     //Encapsulation
     public IDataHandler getDataHandler() {
@@ -73,5 +71,5 @@ public abstract class Character implements ICharacter
     {
         return this.getClass().getSimpleName() + "," + this.getId() + "," + this.getName() + ","  + this.getAge() + "," + this.getSex();
     }  
-    
+
 }
