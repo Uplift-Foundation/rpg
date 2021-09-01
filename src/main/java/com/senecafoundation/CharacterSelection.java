@@ -173,7 +173,6 @@ public class CharacterSelection
                 flag = false;
                 return character;
             }
-
         }
 
         throw new Exception("You did not pick a valid exception");
