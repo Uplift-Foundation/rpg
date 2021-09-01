@@ -72,7 +72,7 @@ public class CharacterSelection
 
 
 
-    public Character picker()
+    public Character picker() throws Exception
     {
         Character character;
         boolean flag = true;
@@ -90,6 +90,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("Viking")) || (race.equals("viking")))
             {
@@ -98,6 +99,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("DemiHuman")) || (race.equals("demihuman")))
             {
@@ -106,6 +108,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("Elf")) || (race.equals("elf")))
             {
@@ -114,6 +117,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("Nuet")) || (race.equals("nuet")))
             {
@@ -122,6 +126,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("Halfling")) || (race.equals("halfling")))
             {
@@ -130,6 +135,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("HalfElf")) || (race.equals("HalfElf")))
             {
@@ -138,6 +144,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("ShadowElf")) || (race.equals("shadowelf")))
             {
@@ -146,6 +153,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("Human")) || (race.equals("human")))
             {
@@ -154,6 +162,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
             else if((race.equals("Tiefler")) || (race.equals("tiefler")))
             {
@@ -162,11 +171,10 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
+                return character;
             }
-
         }
-
-        return character.toString();
+        throw new Exception("You did not pick a valid exception");
     }
     
 }

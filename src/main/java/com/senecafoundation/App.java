@@ -46,7 +46,6 @@ public class App
         //Default Place Maker/City
         Cealasia place = new Cealasia("N/A");
 
-
         //Introduction
         System.out.println(place.WelcomeScreen("The Fading Terrain"));
         place.Directions();
@@ -56,19 +55,15 @@ public class App
             ICharacter word = characters.get(i);
             System.out.println(word.PlayerDetails());
         }
-
-        Character dummy;
+    
+        CharacterSelection pick = new CharacterSelection();
+        Character dummy = pick.picker();
             
-        CharacterSelection pick;
-        pick.picker();
-            
-            
-            
-            Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
-            first.setResponseOne("Nothing there!");
-            first.setResponseTwo("Something is there!");
-            first.Scene();
-            first.playThrough();
+        Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
+        first.setResponseOne("Nothing there!");
+        first.setResponseTwo("Something is there!");
+        first.Scene();
+        first.playThrough();
         
 
     }
