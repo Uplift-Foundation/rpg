@@ -75,106 +75,66 @@ public class CharacterSelection
     public Character picker() throws Exception
     {
         Character character;
-        boolean flag = true;
+        boolean validCharacterWasNotChosen = true;
 
-        while(flag)
+        while(validCharacterWasNotChosen)
         {
-
+            validCharacterWasNotChosen = false;
             System.out.println("\nPick A Character: \n Orc, Viking, DemiHuman, Elf, Nuet, Halfling, HalfElf, ShadowElf, Human, Tiefler");
             String race = input.nextLine();
 
             if((race.equals("Orc")) || (race.equals("orc")))
             {
                 character = new Orc("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("Viking")) || (race.equals("viking")))
             {
                 character = new Viking("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("DemiHuman")) || (race.equals("demihuman")))
             {
                 character = new DemiHuman("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("Elf")) || (race.equals("elf")))
             {
                 character = new Elf("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("Nuet")) || (race.equals("nuet")))
             {
                 character = new Nuet("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("Halfling")) || (race.equals("halfling")))
             {
                 character = new Halfling("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("HalfElf")) || (race.equals("HalfElf")))
             {
                 character = new HalfElf("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("ShadowElf")) || (race.equals("shadowelf")))
             {
                 character = new ShadowElf("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("Human")) || (race.equals("human")))
             {
                 character = new Human("",0,"",25,20,dataHandler);
-                character.setName(pickName());
-                character.setSex(pickSex());
-                character.setAge(pickAge());
-                flag = false;
-                return character;
             }
             else if((race.equals("Tiefler")) || (race.equals("tiefler")))
             {
                 character = new Tiefler("",0,"",25,20,dataHandler);
+            }
+            else {
+                character = new Human("",0,"",25,20,dataHandler);
+                validCharacterWasNotChosen = true;
+            }
+            if (!validCharacterWasNotChosen) {
                 character.setName(pickName());
                 character.setSex(pickSex());
                 character.setAge(pickAge());
-                flag = false;
                 return character;
             }
         }
-
+        
         throw new Exception("You did not pick a valid exception");
     }
     
