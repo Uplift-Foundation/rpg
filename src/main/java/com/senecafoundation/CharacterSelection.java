@@ -90,7 +90,7 @@ public class CharacterSelection
                 character.setAge(pickAge());
                 character.setSex(pickSex());
                 flag = false;
-                return character;
+                return character; // Return the character - not the "toString"
             }
             else if((race.equals("Viking")) || (race.equals("viking")))
             {
@@ -174,7 +174,8 @@ public class CharacterSelection
                 return character;
             }
         }
-        throw new Exception("You did not pick a valid exception");
+        // It should never reach this point - it's an exceptional state if it does
+        throw new Exception("You did not pick a valid character.");
     }
     
 }
