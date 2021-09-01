@@ -56,13 +56,13 @@ public class App
             ICharacter word = characters.get(i);
             System.out.println(word.PlayerDetails());
         }
-            //ends or starts while loop
-            //boolean selection = true;
 
-            //Dummy Player Object
-            Character dummy = new Orc("",0,"",25,20,dataHandler); 
+        Character dummy;
             
-            dummy.chooseCharacter(dummy);
+        CharacterSelection pick;
+        pick.picker();
+            
+            
             
             Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
             first.setResponseOne("Nothing there!");
