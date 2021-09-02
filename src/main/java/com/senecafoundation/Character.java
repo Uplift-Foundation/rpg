@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import com.senecafoundation.DataHandler.IDataHandler;
 
+
 public abstract class Character implements ICharacter
 {
     //Variables
@@ -69,5 +70,6 @@ public abstract class Character implements ICharacter
     public String toString() 
     {
         return this.getClass().getSimpleName() + "," + this.getId() + "," + this.getName() + ","  + this.getAge() + "," + this.getSex();
-    }
+    }  
+
 }
