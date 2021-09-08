@@ -56,10 +56,21 @@ public class App
             System.out.println(word.PlayerDetails());
         }
 
+        System.out.println("\nPick A Character: \n Orc, Viking, DemiHuman, Elf, Nuet, Halfling, HalfElf, ShadowElf, Human, Tiefler");
+        String race = sc.nextLine();
+
         CharacterSelection pick = new CharacterSelection();
-        Character dummy; 
-        dummy = pick.picker();
-        System.out.println("\n" + dummy.toString());
+        Character character = pick.picker(race);
+        
+        System.out.println("Character Name:\n");
+        String characterName = sc.nextLine();
+        character.setName(pick.pickName(characterName));
+
+        System.out.println("Character Sex: Male/Female\n");
+        String characterSex = sc.nextLine();
+        character.setSex(pick.pickSex(characterSex));
+
+        // *** more console interactions and CharacterSelection needed here
             
         Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
         first.setResponseOne("Nothing there!");
