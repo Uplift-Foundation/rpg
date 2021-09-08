@@ -55,19 +55,17 @@ public class App
             ICharacter word = characters.get(i);
             System.out.println(word.PlayerDetails());
         }
-            
+
         CharacterSelection pick = new CharacterSelection();
-        Character dummy = pick.picker();
-        System.out.println("\nCharacter Created: " + dummy.toString() + "\n");
-            
-            
+        Character dummy; 
+        dummy = pick.picker();
+        System.out.println("\n" + dummy.toString());
             
         Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
         first.setResponseOne("Nothing there!");
         first.setResponseTwo("Something is there!");
-        first.Scene();
-        first.playThrough();
+        System.out.println(first.Scene());
+        System.out.println(first.playThrough());
         
-
     }
 }

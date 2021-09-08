@@ -36,9 +36,9 @@ public class Cealasia implements ICealasia
         return " \n Welcome to the World of Cealasia.\n For now, you are situated in " + x + ".\n";
     }
 
-    public void Directions()
+    public String Directions()
     {
-        System.out.println(" \n Ten different races live within the world of Cealasia.\n Each possessing a different set of starting skills stronger than others. \n Who would you choose? \n");
+        return" \n Ten different races live within the world of Cealasia.\n Each possessing a different set of starting skills stronger than others. \n Who would you choose? \n";
     }
 
 }
