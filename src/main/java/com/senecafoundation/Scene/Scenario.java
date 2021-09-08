@@ -8,6 +8,8 @@ public class Scenario extends Choices
 
     private int id;
 
+    //Add another variable ---> private int nextSceneID and maybe previousSceneID
+
     private String sceneName;
     
     private String sceneText;
@@ -54,12 +56,12 @@ public class Scenario extends Choices
     }
 
     //Methods
-    public void Scene()
+    public String Scene()
     {
-        System.out.print("\n" + "***  " + this.getSceneName() + " ***\n\n\n" + getSceneText());
+        return("\n" + "***  " + this.getSceneName() + " ***\n\n\n" + getSceneText());
     }
 
-    public void playThrough()throws Exception
+    public String playThrough()throws Exception
     {
         
             System.out.println("\n\n\n" + "Type 1 OR 2 \n");
@@ -69,12 +71,14 @@ public class Scenario extends Choices
 
             if(choiceX == 1)
             {
-                System.out.println(this.getResponseOne() + "\n");
+                return(this.getResponseOne() + "\n");
             }
             else if(choiceX == 2)
             {
-                System.out.println(this.getResponseTwo() + "\n");
+                return(this.getResponseTwo() + "\n");
             }
+
+            throw new Exception("Invalid Exception.");
         
     }
     

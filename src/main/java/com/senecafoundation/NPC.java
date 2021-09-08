@@ -23,14 +23,14 @@ public class NPC implements INPC
     }
 
     //Methods
-    public void PrintPhrases()
+    public String PrintPhrases()
     {
         String[] phrases = {"Hello, nice weather we are having.", "Hello traveler!", "Sheeeeeeeesh!"};
         Random rand = new Random();
         int upperbound = phrases.length;
         int randomNumber = rand.nextInt(upperbound);
 
-        System.out.println(name + ": " + phrases[randomNumber]);
+        return(name + ": " + phrases[randomNumber]);
     }
 
 }

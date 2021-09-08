@@ -45,9 +45,9 @@ public class BaseStats
     }
 
     //Method
-    public void PrintStats()
+    public String PrintStats()
     {
-        System.out.println("Health: " + Health + "Mana: " + Mana + "Stamina: " + Stamina);
+        return("Health: " + Health + "Mana: " + Mana + "Stamina: " + Stamina);
     }
         
 
