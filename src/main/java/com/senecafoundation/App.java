@@ -56,16 +56,41 @@ public class App
             System.out.println(word.PlayerDetails());
         }
 
+        Character character = new Orc("",0,"", 0, 0, dataHandler);
         CharacterSelection pick = new CharacterSelection();
-        Character dummy; 
-        dummy = pick.picker();
-        System.out.println("\n" + dummy.toString());
+
+        System.out.println("\nPick A Character: \n Orc, Viking, DemiHuman, Elf, Nuet, Halfling, HalfElf, ShadowElf, Human, Tiefler");
+        String race = sc.nextLine();
+        
+        System.out.println("Character Name:\n");
+        String characterName = sc.nextLine();
+        character.setName(pick.pickName(characterName));
+
+        System.out.println("Character Sex: Male/Female\n");
+        String characterSex = sc.nextLine();
+        character.setSex(pick.pickSex(characterSex));
+
+        System.out.println("Character Age: \n");
+        int characterAge = sc.nextInt();
+        character.setAge(pick.pickAge(characterAge));
+
+
+        character = pick.picker(race);
+
+        System.out.println("\n" + character.toString());
+
+        // *** more console interactions and CharacterSelection needed here
             
         Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
         first.setResponseOne("Nothing there!");
         first.setResponseTwo("Something is there!");
         System.out.println(first.Scene());
-        System.out.println(first.playThrough());
+
+        System.out.println("\n\n\n" + "Type 1 OR 2 \n");
+        System.out.println("\n[1] " + first.getChoiceOne() + "\n" + "[2] " + first.getChoiceTwo() + " \n");
+        int choiceX = sc.nextInt();
+
+        System.out.println(first.playThrough(choiceX));
         
     }
 }

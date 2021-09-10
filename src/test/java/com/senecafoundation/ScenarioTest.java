@@ -23,12 +23,13 @@ public class ScenarioTest
     {
         this.systemUnderTest.Scene();
     };
-
+    /*
      @Test 
      void Play() throws Exception
      {
         this.systemUnderTest.playThrough();
      }
+     */
 
     
 }

@@ -61,13 +61,10 @@ public class Scenario extends Choices
         return("\n" + "***  " + this.getSceneName() + " ***\n\n\n" + getSceneText());
     }
 
-    public String playThrough()throws Exception
+    public String playThrough(int choiceX)throws Exception
     {
-        
-            System.out.println("\n\n\n" + "Type 1 OR 2 \n");
 
-            System.out.println("\n[1] " + this.getChoiceOne() + "\n" + "[2] " + this.getChoiceTwo() + " \n");
-            int choiceX = input.nextInt();
+    
 
             if(choiceX == 1)
             {
