@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.NPCTypes;
 
 public interface INPC 
 {

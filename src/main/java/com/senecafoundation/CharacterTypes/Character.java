@@ -2,9 +2,7 @@ package com.senecafoundation.CharacterTypes;
 
 import java.util.UUID;
 
-import com.senecafoundation.CharacterTypes.ICharacter;
 import com.senecafoundation.DataHandler.IDataHandler;
-
 
 public abstract class Character extends BaseStats implements ICharacter 
 {
