@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 
 public interface ICharacter 
 {

@@ -3,6 +3,7 @@ package com.senecafoundation;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import com.senecafoundation.CharacterTypes.Orc;
 import com.senecafoundation.DataHandler.FileDataHandler;
 
 import org.junit.jupiter.api.BeforeEach;

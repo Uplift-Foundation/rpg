@@ -1,5 +1,7 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
+
 import com.senecafoundation.DataHandler.IDataHandler;
+
 public class Halfling extends Character 
 {
     //Variables
@@ -28,7 +30,7 @@ public class Halfling extends Character
     //Constructor
     public Halfling(String name, int age, String sex, int archery, int pickpocket, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 30, 50, 60);
         this.archeryBonus = archery;
         this.pickPocketBonus = pickpocket;
     }

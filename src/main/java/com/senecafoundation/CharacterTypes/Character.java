@@ -1,11 +1,12 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 
 import java.util.UUID;
 
+import com.senecafoundation.CharacterTypes.ICharacter;
 import com.senecafoundation.DataHandler.IDataHandler;
 
 
-public abstract class Character implements ICharacter
+public abstract class Character extends BaseStats implements ICharacter 
 {
     //Variables
     private String name;
@@ -52,11 +53,12 @@ public abstract class Character implements ICharacter
     }
   
     //Constructor
-    public Character(String n, int a, String s, IDataHandler dataHandler)
+    public Character(String name, int age, String sex, IDataHandler dataHandler, int health, int mana, int stamina)
     {
-        this.name = n;
-        this.age = a;
-        this.sex = s;
+        super(health, mana, stamina);
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
         this.setId(UUID.randomUUID().toString());
         this.dataHandler = dataHandler; 
     }

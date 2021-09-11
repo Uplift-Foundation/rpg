@@ -1,35 +1,38 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterSelection;
+
+import com.senecafoundation.CharacterTypes.Character;
+import com.senecafoundation.CharacterTypes.DemiHuman;
+import com.senecafoundation.CharacterTypes.Elf;
+import com.senecafoundation.CharacterTypes.HalfElf;
+import com.senecafoundation.CharacterTypes.Halfling;
+import com.senecafoundation.CharacterTypes.Human;
+import com.senecafoundation.CharacterTypes.Nuet;
+import com.senecafoundation.CharacterTypes.Orc;
+import com.senecafoundation.CharacterTypes.ShadowElf;
+import com.senecafoundation.CharacterTypes.Tiefler;
+import com.senecafoundation.CharacterTypes.Viking;
 import com.senecafoundation.DataHandler.IDataHandler;
-
-
 import java.util.Scanner;
 
-public class CharacterSelection 
+public class CharacterSelection implements ICharacterSelection
 {
     //Variables
     private Scanner input = new Scanner(System.in);
     private IDataHandler dataHandler;
 
     //Constructor
-    public CharacterSelection()
-    {
-        
-    }
-
+    public CharacterSelection() { }
 
     //Methods
-
     public String pickName()
     {
         System.out.println("Character Name: \n");
         String characterName = input.nextLine();
-        
         return characterName;
     }
 
     public int pickAge()
     {
-
         int characterAge = 0;
 
         while(characterAge <= 0 || characterAge >= 100)
@@ -43,7 +46,6 @@ public class CharacterSelection
             {
                 System.out.println("Error!"); 
             }
-
         }
 
         return characterAge;

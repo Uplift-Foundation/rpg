@@ -4,8 +4,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
 
-import com.senecafoundation.Character;
-import com.senecafoundation.Orc;
+import com.senecafoundation.CharacterTypes.Character;
+import com.senecafoundation.CharacterTypes.Orc;
 
 public class FileDataHandler extends DataHandler {
     

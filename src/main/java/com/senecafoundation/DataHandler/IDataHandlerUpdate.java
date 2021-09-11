@@ -1,6 +1,6 @@
 package com.senecafoundation.DataHandler;
 
-import com.senecafoundation.Character;
+import com.senecafoundation.CharacterTypes.Character;
 
 public interface IDataHandlerUpdate 
 {

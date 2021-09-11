@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 
 import com.senecafoundation.DataHandler.IDataHandler;
 
@@ -30,7 +30,7 @@ public class Elf extends Character
     //Constructor
     public Elf(String name, int age, String sex, int illusion, int enchanting, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 70, 30, 80);
         this.illusionBonus = illusion;
         this.enchantingBonus = enchanting;
     }

@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 
 import com.senecafoundation.DataHandler.IDataHandler;
 
@@ -31,7 +31,7 @@ public class ShadowElf extends Character
     //Constructor
     public ShadowElf(String name, int age, String sex, int destruction, int alteration, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 30, 80, 80);
         this.destructionBonus = destruction;
         this.alterationBonus = alteration;
     }

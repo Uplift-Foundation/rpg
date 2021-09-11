@@ -1,4 +1,5 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
+
 import com.senecafoundation.DataHandler.IDataHandler;
 
 public class Human extends Character 
@@ -21,17 +22,16 @@ public class Human extends Character
     {
         return this.blockBonus;
     }
+
     public void setBlockBonus(int newBlockBonus)
     {
         this.blockBonus = newBlockBonus;
     }
 
-    
-
     //Constructor
     public Human(String name, int age, String sex, int restoration, int block, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 50, 50, 70);
         this.restorationBonus = restoration;
         this.blockBonus = block;
     }
@@ -41,6 +41,7 @@ public class Human extends Character
     {
         return  (this.getName() + " Restoration: " + restorationBonus + " Block: " + blockBonus);
     }
+    
     public String toString() 
     {
         // We just realized we could do it this way...

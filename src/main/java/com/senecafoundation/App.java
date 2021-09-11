@@ -3,10 +3,22 @@ package com.senecafoundation;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.senecafoundation.CharacterSelection.CharacterSelection;
+import com.senecafoundation.CharacterSelection.ICharacterSelection;
+import com.senecafoundation.CharacterTypes.Character;
+import com.senecafoundation.CharacterTypes.DemiHuman;
+import com.senecafoundation.CharacterTypes.Elf;
+import com.senecafoundation.CharacterTypes.HalfElf;
+import com.senecafoundation.CharacterTypes.Halfling;
+import com.senecafoundation.CharacterTypes.Human;
+import com.senecafoundation.CharacterTypes.ICharacter;
+import com.senecafoundation.CharacterTypes.Nuet;
+import com.senecafoundation.CharacterTypes.Orc;
+import com.senecafoundation.CharacterTypes.ShadowElf;
+import com.senecafoundation.CharacterTypes.Tiefler;
+import com.senecafoundation.CharacterTypes.Viking;
 import com.senecafoundation.DataHandler.FileDataHandler;
 import com.senecafoundation.Scene.Scenario;
-
-
 
 public class App 
 {
@@ -16,7 +28,6 @@ public class App
 
         //ArrayList to withhold Player Races
         ArrayList<ICharacter> characters = new ArrayList<ICharacter>();
-
         FileDataHandler dataHandler = new FileDataHandler("./characterData.csv");
 
         //Default Character Races
@@ -56,10 +67,10 @@ public class App
             System.out.println(word.PlayerDetails());
         }
 
-        CharacterSelection pick = new CharacterSelection();
-        Character dummy; 
-        dummy = pick.picker();
-        System.out.println("\n" + dummy.toString());
+        ICharacterSelection pick = new CharacterSelection();
+        Character userSelectedCharacter = pick.picker();
+
+        System.out.println("\n" + userSelectedCharacter.toString());
             
         Scenario first = new Scenario("Left Path","Right Path", 0, "Meadow Peak","You stumbled upon a path that splits in two.");
         first.setResponseOne("Nothing there!");
@@ -67,5 +78,6 @@ public class App
         System.out.println(first.Scene());
         System.out.println(first.playThrough());
         
+        sc.close();
     }
 }
