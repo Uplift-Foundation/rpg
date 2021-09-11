@@ -14,7 +14,7 @@ public class ScenarioTest
     @BeforeEach
     void assignScene()
     {
-        this.systemUnderTest = new Scenario("Left Path","Right Path",0,"Meadow Peak","You stumbled upon a path that splits in two.");
+        //;
         
     }
 
