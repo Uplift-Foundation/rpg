@@ -4,4 +4,5 @@ public interface ICharacter
 {
     String PlayerDetails();
     String toString();
+    public String getId();
 }
