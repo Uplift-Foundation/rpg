@@ -3,42 +3,18 @@ package com.senecafoundation.Scene;
 public class Response 
 {
     //Variables
-    private String responseOne;
-    private String responseTwo;
-
-    //Accessors and Mutators
-    public String getResponseOne() 
-    {
-        return responseOne;
+    private String responseText;
+    private String resultingSceneIDFromChoce;
+    
+    public Response(String responseText, String resultingSceneIDFromChoce) {
+        this.responseText = responseText;
+        this.resultingSceneIDFromChoce = resultingSceneIDFromChoce;
     }
-    public void setResponseOne(String responseOne) 
-    {
-        this.responseOne = responseOne;
-    }
-    public String getResponseTwo() 
-    {
-        return responseTwo;
+    public String getResultingSceneIDFromChoice() {
+        return resultingSceneIDFromChoce;
     }
 
-    public void setResponseTwo(String responseTwo) 
-    {
-        this.responseTwo = responseTwo;
+    public String getResponseText() {
+        return responseText;
     }
-
-    //Constructor
-    public Response()
-    {
-        
-        
-    }
-
-    
-
-    
-
-    
-
-    
-
-    
 }

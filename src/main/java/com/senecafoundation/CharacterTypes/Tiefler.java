@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 import com.senecafoundation.DataHandler.IDataHandler;
 public class Tiefler extends Character 
 {
@@ -28,7 +28,7 @@ public class Tiefler extends Character
     //Constructor
     public Tiefler(String name, int age, String sex, int oneHanded, int archery, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 50, 50, 50);
         this.oneHandedBonus = oneHanded;
         this.archeryBonus = archery;
     }

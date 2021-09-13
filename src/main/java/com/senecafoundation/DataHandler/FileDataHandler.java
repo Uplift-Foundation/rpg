@@ -4,8 +4,9 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
 
-import com.senecafoundation.Character;
-import com.senecafoundation.Orc;
+import com.senecafoundation.CharacterTypes.Character;
+import com.senecafoundation.CharacterTypes.ICharacter;
+import com.senecafoundation.CharacterTypes.Orc;
 
 public class FileDataHandler extends DataHandler {
     
@@ -24,7 +25,7 @@ public class FileDataHandler extends DataHandler {
     }
 
     @Override
-    public boolean Create(Character characterFromUser) 
+    public boolean Create(ICharacter characterFromUser) 
     {
         try {
             // See if it exists in the file already
@@ -76,7 +77,7 @@ public class FileDataHandler extends DataHandler {
     }
 
     @Override
-    public Character Update(Character characterToUpdate) 
+    public ICharacter Update(ICharacter characterToUpdate) 
     {
 
         try {

@@ -1,6 +1,8 @@
 package com.senecafoundation;
 import java.util.*;
 
+import com.senecafoundation.CharacterTypes.ICharacter;
+
 public class Cealasia implements ICealasia
 {
     //Variables
@@ -30,7 +32,6 @@ public class Cealasia implements ICealasia
     }
 
     //Methods
-    
     public String WelcomeScreen(String x)
     {
         return " \n Welcome to the World of Cealasia.\n For now, you are situated in " + x + ".\n";

@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 import com.senecafoundation.DataHandler.IDataHandler;
 public class Viking extends Character 
 {
@@ -28,7 +28,7 @@ public class Viking extends Character
     //Constructor
     public Viking(String name, int age, String sex, int twoHandedSwordB, int speechB, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 65, 20, 85);
         this.twoHandedSwordBonus = twoHandedSwordB;
         this.speechBonus = speechB;
     }

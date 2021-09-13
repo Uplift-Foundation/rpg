@@ -1,5 +1,6 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 import com.senecafoundation.DataHandler.IDataHandler;
+
 public class Nuet extends Character 
 {
     //Variables
@@ -28,7 +29,7 @@ public class Nuet extends Character
     //Constructor
     public Nuet(String name, int age, String sex, int lockPicking, int lightArmor, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 50, 50, 50);
         this.lockPickingBonus = lockPicking;
         this.lightArmorBonus = lightArmor;
     }

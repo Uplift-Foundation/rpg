@@ -1,9 +1,8 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 
 public class BaseStats 
 {  
     //Encapsulation
-
     private int Health;
     private int Mana;
     private int Stamina;
@@ -49,6 +48,4 @@ public class BaseStats
     {
         return("Health: " + Health + "Mana: " + Mana + "Stamina: " + Stamina);
     }
-        
-
 }

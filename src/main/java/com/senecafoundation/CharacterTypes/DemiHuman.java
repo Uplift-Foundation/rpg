@@ -1,7 +1,6 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 
 import com.senecafoundation.DataHandler.IDataHandler;
-
 public class DemiHuman extends Character 
 {
     //Variables
@@ -30,7 +29,7 @@ public class DemiHuman extends Character
     //Constructor
     public DemiHuman(String name, int age, String sex, int sneak, int alchemy, IDataHandler dataHandler)
     {
-        super(name, age, sex, dataHandler);
+        super(name, age, sex, dataHandler, 50, 25, 35);
         this.sneakBonus = sneak;
         this.alchemyBonus = alchemy;
     }

@@ -1,37 +1,43 @@
 package com.senecafoundation.Scene;
 
-import java.util.Scanner;
+import java.util.List;
+import java.util.UUID;
 
-public class Scenario extends Choices
+public class Scenario
 {
     //Variables
-
-    private int id;
-
-    //Add another variable ---> private int nextSceneID and maybe previousSceneID
-
+    private String id;
+    private String nextSceneID;
+    private String previousSceneID;
     private String sceneName;
-    
     private String sceneText;
-
-    private Scanner input = new Scanner(System.in);
+    private List<Choice> choices;
 
     //Accessor and Mutators
 
-    public int getId() 
+    public String getId() 
     {
         return id;
     }
-    public void setId(int id) 
-    {
-        this.id = id;
+
+    public String getPreviousSceneID() {
+        return previousSceneID;
+    }
+    public void setPreviousSceneID(String previousSceneID) {
+        this.previousSceneID = previousSceneID;
+    }
+
+    public String getNextSceneID() {
+        return nextSceneID;
+    }
+    public void setNextSceneID(String nextSceneID) {
+        this.nextSceneID = nextSceneID;
     }
 
     public String getSceneName() 
     {
         return sceneName;
     }
-
     public void setSceneName(String sceneName) 
     {
         this.sceneName = sceneName;
@@ -41,18 +47,19 @@ public class Scenario extends Choices
     {
         return sceneText;
     }
-
     public void setSceneText(String sceneText) 
     {
         this.sceneText = sceneText;
     }
 
-    public Scenario(String choiceOne, String choiceTwo, int id, String sceneName, String sceneText)
+    public Scenario(List<Choice> choices, String sceneName, String sceneText, String nextSceneID, String previousSceneId)
     {
-        super(choiceOne, choiceTwo);
-        this.id = id;
+        this.id = UUID.randomUUID().toString();
+        this.choices = choices;
         this.sceneName = sceneName;
         this.sceneText = sceneText;
+        this.nextSceneID = nextSceneID;
+        this.previousSceneID = previousSceneId;
     }
 
     //Methods
@@ -61,28 +68,24 @@ public class Scenario extends Choices
         return("\n" + "***  " + this.getSceneName() + " ***\n\n\n" + getSceneText());
     }
 
-    public String playThrough()throws Exception
+    public String playThrough() throws Exception
     {
-        
-            System.out.println("\n\n\n" + "Type 1 OR 2 \n");
+        // Start the scene text with the scene name and text
+        String sceneAsString = String.join("\n\n", this.sceneName, this.sceneText);
 
-            System.out.println("\n[1] " + this.getChoiceOne() + "\n" + "[2] " + this.getChoiceTwo() + " \n");
-            int choiceX = input.nextInt();
-
-            if(choiceX == 1)
-            {
-                return(this.getResponseOne() + "\n");
-            }
-            else if(choiceX == 2)
-            {
-                return(this.getResponseTwo() + "\n");
-            }
-
-            throw new Exception("Invalid Exception.");
-        
+        // Also append each possible choice
+        for (Choice possibleChoice : this.choices) {
+            sceneAsString = String.join("\n", sceneAsString, possibleChoice.getChoiceOptionNumber() + ") " + possibleChoice.getChoiceText());
+        }
+        return sceneAsString;
     }
-    
 
-    
-    
+    public Response getResponse(int sceneChoice) throws Exception {
+        for (Choice possibleChoice : this.choices) {
+            if (sceneChoice == possibleChoice.getChoiceOptionNumber()) {
+                return possibleChoice.getResponse();
+            }
+        }
+        throw new Exception("Valid response not selected");
+    }
 }

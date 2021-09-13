@@ -1,4 +1,4 @@
-package com.senecafoundation;
+package com.senecafoundation.CharacterTypes;
 import com.senecafoundation.DataHandler.IDataHandler;
 public class Orc extends Character
 {
@@ -30,7 +30,7 @@ public class Orc extends Character
     //Constructor
     public Orc(String name, int age, String sex, int heavyArmor, int smithing, IDataHandler datahandler)
     {
-        super(name, age, sex, datahandler);
+        super(name, age, sex, datahandler, 70, 0, 80);
         this.heavyArmorBonus = heavyArmor;
         this.smithingBonus = smithing;
     }
